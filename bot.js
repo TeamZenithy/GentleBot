@@ -4,7 +4,7 @@ const logger = require('./utils/logger')
 const embed = require('./utils/embed')
 
 const commands = require('./commands')
-const event = require('./event')
+const events = require('./events')
 
 class GentleBot extends Discord.Client {
   constructor(_config) {
@@ -31,7 +31,7 @@ class GentleBot extends Discord.Client {
       )
     })
 
-    Object.values(event).forEach((e) => new e(this))
+    Object.values(events).forEach((e) => new e(this))
     Object.values(commands).forEach((raw) => new raw(this))
   }
 
