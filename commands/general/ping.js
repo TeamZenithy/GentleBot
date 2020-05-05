@@ -10,16 +10,14 @@ class Ping extends Model {
   }
 
   run(msg, client) {
-    const Embed = new client.embed()
-    Embed.init()
-    Embed.setColor('#0099ff')
-    Embed.addField(
+    client.embed.init()
+    client.embed.setColor('#0099ff')
+    client.embed.addField(
       '🏓핑!',
       `⏳이 샤드의 API 핑은 **${Math.round(msg.guild.shard.ping)}ms** 에요!`,
       true
     )
-    Embed.setFooter('GentleBot by Team Zenithy')
-    msg.channel.send(Embed.get())
+    msg.channel.send(client.embed.get())
   }
 }
 

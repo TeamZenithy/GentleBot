@@ -12,7 +12,7 @@ class GentleBot extends Discord.Client {
     this.config = _config
     this.logger = logger
     this.commands = new Map()
-    this.embed = embed
+    this.embed = new embed()
     this.shardId = process.argv[1]
     this.shardCount = process.argv[2]
     this.fetchAllMembers = true

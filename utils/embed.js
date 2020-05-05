@@ -8,7 +8,7 @@ module.exports = class SmallRichEmbed {
         fields: [],
         timestamp: Date.now(),
         footer: {
-          text: `${config.bot.name} ${config.bot.candidate} v.${config.bot.version}`,
+          text: `${config.bot.name} ${config.bot.candidate} v.${config.bot.version} by Team. Zenithy`,
           iconURL: ``,
         },
         description: '',
@@ -71,7 +71,7 @@ module.exports = class SmallRichEmbed {
   setFooter(text, image) {
     this.result.embed.footer.text =
       text ||
-      `${config.bot.name} ${config.bot.candidate} v.${config.bot.version}`
+      `${config.bot.name} ${config.bot.candidate} v.${config.bot.version} by Team. Zenithy`
     this.result.embed.footer.iconURL = image || null
   }
 
@@ -82,7 +82,7 @@ module.exports = class SmallRichEmbed {
         fields: [],
         timestamp: Date.now(),
         footer: {
-          text: `${config.bot.name} ${config.bot.candidate} v.${config.bot.version}`,
+          text: `${config.bot.name} ${config.bot.candidate} v.${config.bot.version} by Team. Zenithy`,
           iconURL: ``,
         },
         description: '',
