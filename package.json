@@ -5,7 +5,7 @@
   "repository": "https://github.com/TeamZenithy/GentleBot.git",
   "author": "TeamZenithy",
   "license": "GPL-3.0-or-later",
-  "private": false,
+  "private": true,
   "scripts": {
     "start": "node index.js"
   },
