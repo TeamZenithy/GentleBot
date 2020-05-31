@@ -13,7 +13,18 @@
     "@discordjs/opus": "^0.3.2",
     "date-utils": "^1.2.21",
     "discord.js": "^12.2.0",
+    "mysql2": "^2.1.0",
+    "ulangts": "^1.0.6",
+    "uuniquets": "^1.0.0",
     "winston": "^3.2.1",
     "winston-daily-rotate-file": "^4.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
   }
 }

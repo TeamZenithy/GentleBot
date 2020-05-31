@@ -8,7 +8,7 @@ const DailyRotateFile = new winston.transports.DailyRotateFile({
   zippedArchive: true,
   format: winston.format.printf(
     (info) =>
-      `[${new Date().getTime()}] [${info.level.toUpperCase()}] ${info.message}`
+      `[${new Date().getTime()}] [${info.level.toUpperCase()}] ${info.message}`,
   ),
 })
 
@@ -49,9 +49,9 @@ const logger = winston.createLogger({
         info.level,
         `[${new Date().toFormat('HH24:MI:SS')}] [${info.level.toUpperCase()}] ${
           info.message
-        }`
-      )
-    )
+        }`,
+      ),
+    ),
   ),
   transports: transports,
 })

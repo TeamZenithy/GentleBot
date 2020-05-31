@@ -9,23 +9,23 @@ module.exports = class SmallRichEmbed {
         timestamp: Date.now(),
         footer: {
           text: `${config.bot.name} ${config.bot.candidate} v.${config.bot.version} by Team. Zenithy`,
-          iconURL: ``,
+          iconURL: ''
         },
         description: '',
         author: {
           name: '',
           iconURL: '',
-          url: '',
+          url: ''
         },
         image: {
-          uri: '',
+          uri: ''
         },
         url: '',
         title: '',
         thumbnail: {
-          url: '',
-        },
-      },
+          url: ''
+        }
+      }
     }
   }
 
@@ -33,7 +33,7 @@ module.exports = class SmallRichEmbed {
     this.result.embed.fields.push({
       name: title || null,
       value: value || null,
-      inline: inline || false,
+      inline: inline || false
     })
   }
 
@@ -83,23 +83,23 @@ module.exports = class SmallRichEmbed {
         timestamp: Date.now(),
         footer: {
           text: `${config.bot.name} ${config.bot.candidate} v.${config.bot.version} by Team. Zenithy`,
-          iconURL: ``,
+          iconURL: ''
         },
         description: '',
         author: {
           name: '',
           iconURL: '',
-          url: '',
+          url: ''
         },
         image: {
-          uri: '',
+          uri: ''
         },
         url: '',
         title: '',
         thumbnail: {
-          url: '',
-        },
-      },
+          url: ''
+        }
+      }
     }
   }
 

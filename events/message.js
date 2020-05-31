@@ -1,20 +1,34 @@
-const Model = require('../model').event
-class MessageEvent extends Model {
-  constructor(client) {
-    super(client, 'message')
+module.exports = async (client, msg) => {
+  if (msg.author.bot) return
+  if (!msg.content.startsWith(client.config.bot.prefix)) return
+
+  // const raw = client.db.query(`SELECT * FROM users WHERE aid="${msg.author.id}"`).catch(console.error)
+  const userData = (
+    await client.db.query(`SELECT * FROM users WHERE aid="${msg.author.id}"`)
+  )[0][0]
+  client.logger.info(`${JSON.stringify(userData)}, Requested Command : ${msg}`)
+  if (!userData) {
+    client.db.query(`INSERT INTO users (aid) VALUES ("${msg.author.id}")`)
+    client.db.release()
+    return module.exports(client, msg)
   }
 
-  run(msg) {
-    if (!msg.content.startsWith(this.config.bot.prefix)) return
-    msg.args = msg.content.replace(this.config.bot.prefix, '').split(' ')
-    const cmd = this.commands.get(msg.args[0])
-    if (cmd) {
-      this.logger.info(
-        `${msg.author.id} (${msg.author.username}) executed following command: ${msg.content}`
-      )
-      cmd.run(msg, this)
-    }
+  const lang = client.i18n.get(userData.lang)
+  const args = msg.content
+    .slice(client.config.bot.prefix.length)
+    .trim()
+    .split(/ +/g)
+  const command = args.shift().toLowerCase()
+
+  const cmd = client.commands.get(command)
+  if (!cmd) return
+
+  const compress = {
+    client: client,
+    msg: msg,
+    args: args,
+    data: userData,
+    lang: lang
   }
+  cmd.run(compress)
 }
-
-module.exports = MessageEvent
