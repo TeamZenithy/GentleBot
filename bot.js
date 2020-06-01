@@ -63,6 +63,17 @@ class GentleBot extends Discord.Client {
       }, 10000)
     })
 
+    this.on('guildCreate', (guild) => {
+      console.log('Joined a new guild: ' + guild.name)
+      /**
+       * TODO: Create frame for guild.
+       * frame conatins default warn limit, default welcome message... etc.
+       */
+    })
+
+    /**
+     * Try to load events
+     */
     fs.readdir('./events/', (err, files) => {
       if (err) return this.logger.error(err)
 
@@ -73,6 +84,10 @@ class GentleBot extends Discord.Client {
         client.on(eventName, (a, b, c) => event(this, a, b, c))
       })
     })
+    /**
+     * Try to load commands.
+     * If some command occurs error, It will skip that command.
+     */
     fs.readdir('./commands/', (err, files) => {
       if (err) return this.logger.error(err)
 

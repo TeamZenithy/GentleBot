@@ -8,8 +8,8 @@ const DailyRotateFile = new winston.transports.DailyRotateFile({
   zippedArchive: true,
   format: winston.format.printf(
     (info) =>
-      `[${new Date().getTime()}] [${info.level.toUpperCase()}] ${info.message}`,
-  ),
+      `[${new Date().getTime()}] [${info.level.toUpperCase()}] ${info.message}`
+  )
 })
 
 const Console = new winston.transports.Console()
@@ -26,7 +26,7 @@ const logLevels = {
     http: 3,
     verbose: 4,
     debug: 5,
-    silly: 6,
+    silly: 6
   },
   colors: {
     error: 'red',
@@ -35,8 +35,8 @@ const logLevels = {
     http: 'green',
     verbose: 'gray',
     debug: 'cyan',
-    silly: 'yellow',
-  },
+    silly: 'yellow'
+  }
 }
 winston.addColors(logLevels)
 const logger = winston.createLogger({
@@ -49,10 +49,10 @@ const logger = winston.createLogger({
         info.level,
         `[${new Date().toFormat('HH24:MI:SS')}] [${info.level.toUpperCase()}] ${
           info.message
-        }`,
-      ),
-    ),
+        }`
+      )
+    )
   ),
-  transports: transports,
+  transports: transports
 })
 module.exports = logger

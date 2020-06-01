@@ -35,7 +35,7 @@ module.exports = class Notice extends Model {
       Embed.setColor(14217046)
       return pkg.msg.channel.send(Embed.get())
     }
-    const notice = /(araha-공지|봇-공지|공지|notice|announce|announcement)/gi
+    const notice = /(젠틀봇-공지|gentlebot-공지|봇-공지|공지|notice|announce|announcement)/gi
     //    let notice = /(testing)/gi
     const content = pkg.args.join(' ') + ' '
     Embed.addField('📣 **공지 / Notice**', content)
@@ -44,7 +44,7 @@ module.exports = class Notice extends Model {
       pkg.msg.author.avatarURL
     )
     pkg.client.logger.info(
-      `${pkg.msg.author.tag}(${pkg.msg.author.id}) has noticed following content:\n${content}`
+      `${pkg.msg.author.tag}(${pkg.msg.author.id}) has noticed following message:\n${content}`
     )
     pkg.client.guilds.forEach(async (guild) => {
       const textchannels = guild.channels
