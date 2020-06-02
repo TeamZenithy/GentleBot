@@ -1,10 +1,10 @@
 const Model = require('../model/commands')
 const SmallRichEmbed = require('../utils/embed.js')
 
-module.exports = class Ping extends Model {
+module.exports = class Status extends Model {
   constructor() {
     super({
-      cmds: ['핑', 'ping', 'pong', '퐁'],
+      cmds: ['상태', 'status'],
       description: 'cmd_ping_desc',
       category: 'category_general',
       commandName: 'cmd_ping',

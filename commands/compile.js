@@ -1,6 +1,7 @@
 const Model = require('../model/commands')
 const SmallRichEmbed = require('../utils/embed')
 const checkOwner = require('../utils/checkOwner')
+const JSONchecker = require('../utils/JSONchecker')
 
 module.exports = class Compile extends Model {
   constructor() {
@@ -17,14 +18,6 @@ module.exports = class Compile extends Model {
   async run(pkg) {
     const Embed = new SmallRichEmbed()
     Embed.init()
-    function JSONchecker(json) {
-      try {
-        JSON.parse(json)
-        return true
-      } catch (err) {
-        return false
-      }
-    }
 
     if (this.ownerOnly && !checkOwner(pkg.msg.author.id)) {
       Embed.addField(
