@@ -27,12 +27,16 @@ module.exports = class Reboot extends Model {
       return pkg.msg.channel.send(Embed.get())
     }
 
-    Embed.addField(pkg.lang.get('reboot'), pkg.lang.get('reboot_desc'), true)
+    Embed.addField(
+      pkg.lang.get('reboot'),
+      pkg.lang.get('reboot_desc', [pkg.client.shard.count]),
+      true
+    )
     pkg.msg.channel.send(Embed.get()).then(() => {
       pkg.client.logger.info(
         `${pkg.msg.author.tag}(${pkg.msg.author.id}) has rebooted bot.`
       )
-      process.exit(0)
+      pkg.client.shard.broadcastEval('process.exit(0)')
     })
   }
 }

@@ -17,7 +17,6 @@ module.exports = async (client, msg) => {
   client.db = await pool.getConnection(async (conn) => conn)
 
   const activitiesList = [
-    `${client.guilds.size} Servers | ${client.config.bot.prefix}help`,
     `${client.config.bot.candidate} v.${client.config.bot.version} | ${client.config.bot.prefix}help`,
     `${client.shard.count} Shards | ${client.config.bot.prefix}help`
   ]

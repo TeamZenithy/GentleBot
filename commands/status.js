@@ -2,7 +2,8 @@ const Model = require('../model/commands')
 const SmallRichEmbed = require('../utils/embed.js')
 
 const OS = require('os')
-const OSUTILS = require('os-utils')
+
+const Discord = require('discord.js')
 
 const { duration } = require('moment')
 require('moment-duration-format')
@@ -38,28 +39,61 @@ module.exports = class Status extends Model {
           (prev, memberCount) => prev + memberCount,
           0
         )
+        Embed.setThumbnail(`${pkg.client.user.displayAvatarURL()}`)
         Embed.addField(
-          'RAM 사용량',
+          pkg.lang.get('status_bot_id'),
+          `${pkg.client.user.id}`,
+          true
+        )
+        Embed.addField(
+          pkg.lang.get('status_bot_ram_usage'),
           (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + 'MB',
           true
         )
         Embed.addField(
-          '봇 업타임',
-          duration(pkg.client.uptime).format('D[일], H[시간], m[분], s[초]'),
+          pkg.lang.get('status_bot_uptime'),
+          duration(pkg.client.uptime).format(
+            `D[${pkg.lang.get('day')}], H[${pkg.lang.get(
+              'hour'
+            )}], m[${pkg.lang.get('minute')}], s[${pkg.lang.get('second')}]`
+          ),
           true
         )
         Embed.addField(
-          '이 샤드의 서버수',
+          pkg.lang.get('status_bot_servers_of_this_shard'),
           `${pkg.client.guilds.cache.size}`,
           true
         )
         Embed.addField(
-          '이 샤드의 유저수',
+          pkg.lang.get('status_bot_users_of_this_shard'),
           `${pkg.client.users.cache.size}`,
           true
         )
-        Embed.addField('모든 샤드의 서버수', `${totalGuilds}`, true)
-        Embed.addField('모든 샤드의 유저수', `${totalMembers}`, true)
+        Embed.addField(
+          pkg.lang.get('status_bot_servers_of_all_shard'),
+          `${totalGuilds}`,
+          true
+        )
+        Embed.addField(
+          pkg.lang.get('status_bot_users_of_all_shard'),
+          `${totalMembers}`,
+          true
+        )
+        Embed.addField(
+          pkg.lang.get('status_bot_nodejs_ver'),
+          `${process.version}`,
+          true
+        )
+        Embed.addField(
+          pkg.lang.get('status_bot_discordjs_ver'),
+          `${Discord.version}`,
+          true
+        )
+        Embed.addField(
+          pkg.lang.get('status_bot_os_info'),
+          `${OS.type().replace('_', ' ')} v.${OS.release()}`,
+          true
+        )
         pkg.msg.channel.send(Embed.get())
       })
       .catch(console.error)
