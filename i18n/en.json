@@ -64,6 +64,9 @@
   "minute": " minute",
   "second": " second",
 
+  "github_last_commit_info": "Last Commit Info",
+  "github_last_commit_info_desc": "**[``<[0]>``](<[1]>)** <[2]> - <[3]>\nby **<[4]>** on **<[5]>** Branch",
+
   "cmd_invite": "📧 Invite",
   "cmd_invite_desc": "Show Bot's invite link.\nUsage:\n> ``<[0]>invite``\nSame featured command:\n> ``<[0]>초대``",
   "cmd_support": "📧 Support server",
