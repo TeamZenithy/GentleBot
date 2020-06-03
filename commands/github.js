@@ -25,13 +25,16 @@ module.exports = class GitHub extends Model {
         'https://github.com/TeamZenithy/GentleBot'
       )
       Embed.addField(
-        'Last Commit Info',
+        pkg.lang.get('github_last_commit_info'),
         pkg.lang.get('github_last_commit_info_desc', [
           `${commitInfo.shortHash}`,
           `https://github.com/TeamZenithy/GentleBot/commit/${commitInfo.hash}`,
           `${commitInfo.subject}`,
-          `${commitInfo.committer.name}](https://github.com/${commitInfo.committer.name}`,
-          `${commitInfo.branch}](https://github.com/TeamZenithy/GentleBot/brach/${commitInfo.branch}`
+          `${commitInfo.committer.name}`,
+          `${commitInfo.committer.name}`,
+          `https://github.com/${commitInfo.committer.name}`,
+          `${commitInfo.branch}`,
+          `https://github.com/TeamZenithy/GentleBot/brach/${commitInfo.branch}`
         ])
       )
       pkg.msg.channel.send(Embed.get())
