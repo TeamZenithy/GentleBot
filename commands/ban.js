@@ -14,22 +14,18 @@ module.exports = class Ban extends Model {
   }
 
   async run(pkg) {
-    // const Embed = new SmallRichEmbed()
-    var member = pkg.msg.mentions.members.first()
-    // Kick
-    member
+    const Embed = new SmallRichEmbed()
+    const target = pkg.msg.mentions.members.first()
+    target
       .ban()
-      .then((member) => {
-        // Successmessage
-        pkg.msg.channel.send(
-          ':wave: ' +
-            member.displayName +
-            ' has been successfully banned :point_right: '
-        )
+      .then((target) => {
+        Embed.setTitle(pkg.lang.get('ban_success', [target.user.tag]))
+        pkg.msg.channel.send(Embed.get())
       })
       .catch(() => {
-        // Failmessage
-        pkg.msg.channel.send('Access Denied')
+        Embed.setTitle(pkg.lang.get('ban_fail', [target.user.tag]))
+        Embed.setColor(16711680)
+        pkg.msg.channel.send(Embed.get())
       })
   }
 }

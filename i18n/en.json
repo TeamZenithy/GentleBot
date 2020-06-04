@@ -67,6 +67,12 @@
   "github_last_commit_info": "Last Commit Info",
   "github_last_commit_info_desc": "**[``<[0]>``](<[1]>)** <[2]> - <[3]>\nby **[<[4]>](<[5]>)** on **[<[6]>](<[7]>)** Branch",
 
+  "kick_success": "✅ Successfully Kicked <[0]>.",
+  "kick_fail": "❌ Failed to kick <[0]>. Review my role's permission and try again.",
+
+  "ban_success": "✅ Successfully Banned <[0]>.",
+  "ban_fail": "❌ Failed to ban <[0]>. Review my role's permission and try again.",
+
   "cmd_invite": "📧 Invite",
   "cmd_invite_desc": "Show Bot's invite link.\nUsage:\n> ``<[0]>invite``\nSame featured command:\n> ``<[0]>초대``",
   "cmd_support": "📧 Support server",
