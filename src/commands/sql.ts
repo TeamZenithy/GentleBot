@@ -2,7 +2,7 @@ import Model from '../model/commands'
 import SmallRichEmbed from '../utils/embed.js'
 import checkOwner from '../utils/checkOwner'
 
-export default class Sql extends Model {
+export = class Sql extends Model {
   constructor() {
     super({
       cmds: ['sql', 'db'],

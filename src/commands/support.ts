@@ -1,7 +1,7 @@
 import Model from '../model/commands'
 import SmallRichEmbed from '../utils/embed.js'
 
-export default class Support extends Model {
+export = class Support extends Model {
   constructor() {
     super({
       cmds: ['지원', 'support'],

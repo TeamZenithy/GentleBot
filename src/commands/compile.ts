@@ -3,7 +3,7 @@ import SmallRichEmbed from '../utils/embed'
 import checkOwner from '../utils/checkOwner'
 import JSONchecker from '../utils/JSONchecker'
 
-export default class Compile extends Model {
+export = class Compile extends Model {
   constructor() {
     super({
       cmds: ['eval', 'code', 'compile'],

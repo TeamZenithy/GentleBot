@@ -4,8 +4,6 @@ import logger from './utils/logger'
 import UlangTS = require('ulangts')
 import fs = require('fs')
 
-// const MySQL = require('mysql2/promise')
-
 class GentleBot extends Client {
   public config: any
   public logger: any

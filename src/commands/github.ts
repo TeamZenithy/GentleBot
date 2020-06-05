@@ -1,9 +1,9 @@
 import Model from '../model/commands'
 import SmallRichEmbed from '../utils/embed.js'
 
-const gitParser = require('git-last-commit')
+import gitParser from 'git-last-commit'
 
-export default class GitHub extends Model {
+export = class GitHub extends Model {
   constructor() {
     super({
       cmds: ['github', 'repo', '깃헙', '깃허브'],

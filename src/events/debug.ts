@@ -1,3 +1,3 @@
-export default async (client, debugInfo) => {
+export = async (client, debugInfo) => {
   client.logger.debug(debugInfo)
 }

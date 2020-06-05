@@ -1,7 +1,7 @@
 import config from '../config.json'
 import MySQL from 'mysql2/promise'
 
-export default async (client, msg) => {
+export = async (client, msg) => {
   client.logger.info(
     `Login Success!\nBot id: ${client.user.id}\nBot Name: ${client.user.username}`
   )

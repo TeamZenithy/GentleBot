@@ -1,7 +1,7 @@
 import Model from '../model/commands'
 import SmallRichEmbed from '../utils/embed.js'
 
-export default class Ban extends Model {
+export = class Ban extends Model {
   constructor() {
     super({
       cmds: ['ban', '밴'],

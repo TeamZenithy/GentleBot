@@ -1,7 +1,7 @@
 import Model from '../model/commands'
 import SmallRichEmbed from '../utils/embed.js'
 
-export default class Sayd extends Model {
+export = class Sayd extends Model {
   constructor() {
     super({
       cmds: ['따라해', 'sayd'],

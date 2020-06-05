@@ -1,4 +1,4 @@
-export default async (client, msg) => {
+export = async (client, msg) => {
   if (msg.author.bot) return
   if (!msg.content.startsWith(client.config.bot.prefix)) return
 

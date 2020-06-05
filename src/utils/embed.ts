@@ -1,6 +1,6 @@
 import config from '../config.json'
 
-export = class SmallRichEmbed {
+export default class SmallRichEmbed {
   result: any
   constructor() {
     this.result = {

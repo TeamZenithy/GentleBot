@@ -2,7 +2,7 @@ import Model from '../model/commands'
 import SmallRichEmbed from '../utils/embed.js'
 import checkOwner from '../utils/checkOwner'
 
-export default class Reboot extends Model {
+export = class Reboot extends Model {
   constructor() {
     super({
       cmds: ['reboot', 'restart', '재시작', '재시동'],

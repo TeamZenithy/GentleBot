@@ -3,7 +3,7 @@ import SmallRichEmbed from '../utils/embed.js'
 import checkOwner from '../utils/checkOwner'
 import unique from 'uuniquets'
 
-export default class Help extends Model {
+export = class Help extends Model {
   constructor() {
     super({
       cmds: ['도움', 'help', '도움말', 'manual'],

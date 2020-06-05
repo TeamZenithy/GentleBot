@@ -3,7 +3,7 @@ import SmallRichEmbed from '../utils/embed.js'
 import checkOwner from '../utils/checkOwner'
 import child from 'child_process'
 
-export default class Shell extends Model {
+export = class Shell extends Model {
   constructor() {
     super({
       cmds: ['shell', 'cmd'],

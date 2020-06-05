@@ -1,7 +1,7 @@
 import Model from '../model/commands'
 import SmallRichEmbed from '../utils/embed.js'
 
-export default class Kick extends Model {
+export = class Kick extends Model {
   constructor() {
     super({
       cmds: ['kick', '킥'],

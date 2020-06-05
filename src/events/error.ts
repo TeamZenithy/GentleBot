@@ -1,3 +1,3 @@
-export default async (client, error) => {
+export = async (client, error) => {
   client.logger.error(error)
 }

@@ -2,7 +2,7 @@ import Model from '../model/commands'
 import SmallRichEmbed from '../utils/embed.js'
 
 const supportLangs = ['en', 'ko']
-export default class Lang extends Model {
+export = class Lang extends Model {
   constructor() {
     super({
       cmds: ['언어', 'language', 'lang'],

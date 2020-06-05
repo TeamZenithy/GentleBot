@@ -1,7 +1,7 @@
 import Model from '../model/commands'
 import SmallRichEmbed from '../utils/embed.js'
 
-export default class Invite extends Model {
+export = class Invite extends Model {
   constructor() {
     super({
       cmds: ['초대', 'invite'],

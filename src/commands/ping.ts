@@ -1,7 +1,7 @@
 import Model from '../model/commands'
 import SmallRichEmbed from '../utils/embed.js'
 
-export default class Ping extends Model {
+export = class Ping extends Model {
   constructor() {
     super({
       cmds: ['핑', 'ping', 'pong', '퐁'],

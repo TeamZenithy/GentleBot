@@ -8,7 +8,7 @@ import Discord from 'discord.js'
 import { duration } from 'moment'
 import 'moment-duration-format'
 
-export default class Status extends Model {
+export = class Status extends Model {
   constructor() {
     super({
       cmds: ['상태', 'status'],
