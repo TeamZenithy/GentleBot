@@ -1,0 +1,20 @@
+{
+  "bot": {
+    "name": "YOUR_BOT_NAME",
+    "prefix": "$",
+    "token": "YOUR_BOT_TOKEN",
+    "sharding": {
+      "count": "auto"
+    },
+    "candidate": "Indev",
+    "version": "0.0.1",
+    "color": 39423
+  },
+  "db": {
+    "host": "",
+    "port": "",
+    "pw": "",
+    "schema": ""
+  },
+  "owners": ["OWNERS1", "OWNERS2"]
+}

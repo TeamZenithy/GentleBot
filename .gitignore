@@ -105,3 +105,4 @@ dist
 yarn.lock
 config.json
 package-lock.json
+build/
