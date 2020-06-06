@@ -13,7 +13,7 @@ export = class Invite extends Model {
     })
   }
 
-  async run(pkg) {
+  async run(pkg: any) {
     const Embed = new SmallRichEmbed()
     Embed.addField(
       pkg.lang.get('invite'),

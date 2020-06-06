@@ -15,7 +15,7 @@ export = class GitHub extends Model {
     })
   }
 
-  async run(pkg) {
+  async run(pkg: any) {
     const Embed = new SmallRichEmbed()
 
     gitParser.getLastCommit((_, commitInfo) => {

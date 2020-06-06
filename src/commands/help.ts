@@ -15,7 +15,7 @@ export = class Help extends Model {
     })
   }
 
-  async run(pkg) {
+  async run(pkg: any) {
     const Embed = new SmallRichEmbed()
     if (pkg.args.length < 1) {
       const sorted = {}

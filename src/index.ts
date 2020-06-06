@@ -8,7 +8,7 @@ const shardMgr = new ShardingManager('./bot.js', {
 
 shardMgr.on('shardCreate', (shard) =>
   console.log(
-    `[SHARD] Shard ${shard.id}/${shardMgr.totalShards} is launching...`
+    `[SHARD] Shard ${shard.id + 1}/${shardMgr.totalShards} is launching...`
   )
 )
 

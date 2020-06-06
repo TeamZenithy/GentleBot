@@ -1,5 +1,6 @@
 import Model from '../model/commands'
 import SmallRichEmbed from '../utils/embed.js'
+import { GuildMember } from 'discord.js'
 
 export = class Kick extends Model {
   constructor() {
@@ -13,12 +14,12 @@ export = class Kick extends Model {
     })
   }
 
-  async run(pkg) {
+  async run(pkg: any) {
     const Embed = new SmallRichEmbed()
     const target = pkg.msg.mentions.members.first()
     target
       .kick()
-      .then((target) => {
+      .then((target: GuildMember) => {
         Embed.setTitle(pkg.lang.get('kick_success', [target.user.tag]))
         pkg.msg.channel.send(Embed.get())
       })

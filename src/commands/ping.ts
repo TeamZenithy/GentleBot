@@ -13,7 +13,7 @@ export = class Ping extends Model {
     })
   }
 
-  async run(pkg) {
+  async run(pkg: any) {
     const Embed = new SmallRichEmbed()
     Promise.all([pkg.client.shard.fetchClientValues('ws.ping')]).then(
       (pings) => {

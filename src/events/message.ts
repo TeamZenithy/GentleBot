@@ -1,4 +1,6 @@
-export = async (client, msg) => {
+import { Message } from 'discord.js'
+
+export = async (client: any, msg: Message) => {
   if (msg.author.bot) return
   if (!msg.content.startsWith(client.config.bot.prefix)) return
 

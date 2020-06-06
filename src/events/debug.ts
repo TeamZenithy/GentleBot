@@ -1,3 +1,3 @@
-export = async (client, debugInfo) => {
+export = async (client: any, debugInfo: string | number) => {
   client.logger.debug(debugInfo)
 }

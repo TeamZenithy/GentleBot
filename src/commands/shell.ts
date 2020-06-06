@@ -15,7 +15,7 @@ export = class Shell extends Model {
     })
   }
 
-  async run(pkg) {
+  async run(pkg: any) {
     const Embed = new SmallRichEmbed()
 
     if (this.ownerOnly && !checkOwner(pkg.msg.author.id)) {

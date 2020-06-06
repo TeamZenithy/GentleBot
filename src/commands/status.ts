@@ -20,7 +20,7 @@ export = class Status extends Model {
     })
   }
 
-  async run(pkg) {
+  async run(pkg: any) {
     const Embed = new SmallRichEmbed()
     const getAllSahrdInfo = [
       pkg.client.shard.fetchClientValues('guilds.cache.size'),
@@ -32,11 +32,11 @@ export = class Status extends Model {
     Promise.all(getAllSahrdInfo)
       .then((results) => {
         const totalGuilds = results[0].reduce(
-          (prev, guildCount) => prev + guildCount,
+          (prev: number, guildCount: number) => prev + guildCount,
           0
         )
         const totalMembers = results[1].reduce(
-          (prev, memberCount) => prev + memberCount,
+          (prev: number, memberCount: number) => prev + memberCount,
           0
         )
         Embed.setThumbnail(`${pkg.client.user.displayAvatarURL()}`)
@@ -91,7 +91,7 @@ export = class Status extends Model {
         )
         Embed.addField(
           pkg.lang.get('status_bot_os_info'),
-          `${OS.type().replace('_', ' ')} v.${OS.release()}`,
+          `${OS.type().replace('_', ' ')} ${OS.release()}`,
           true
         )
         pkg.msg.channel.send(Embed.get())

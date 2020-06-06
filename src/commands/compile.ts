@@ -15,7 +15,7 @@ export = class Compile extends Model {
     })
   }
 
-  async run(pkg) {
+  async run(pkg: any) {
     const Embed = new SmallRichEmbed()
     Embed.init()
 

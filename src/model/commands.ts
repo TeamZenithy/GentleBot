@@ -19,7 +19,7 @@ export default class CommandModel {
 ┗─Category: ${this.category}\n`)
   }
 
-  run(pkg: object) {
+  run(_pkg: object) {
     throw new Error('Error! There was nothing in run() method!')
   }
 }

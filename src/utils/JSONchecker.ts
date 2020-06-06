@@ -1,4 +1,4 @@
-export default (json) => {
+export default (json: string) => {
   try {
     JSON.parse(json)
     return true

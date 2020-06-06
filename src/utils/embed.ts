@@ -30,7 +30,7 @@ export default class SmallRichEmbed {
     }
   }
 
-  addField(title, value, inline?) {
+  addField(title: string, value: string, inline?: boolean) {
     this.result.embed.fields.push({
       name: title || null,
       value: value || null,
@@ -38,38 +38,38 @@ export default class SmallRichEmbed {
     })
   }
 
-  setAuthor(name, iconURL?, url?) {
+  setAuthor(name: string, iconURL?: string, url?: string) {
     this.result.embed.author.name = name || null
     this.result.embed.author.iconURL = iconURL || null
     this.result.embed.author.url = url || null
   }
 
-  setColor(color) {
+  setColor(color: string | number) {
     this.result.embed.color = color || this.result.embed.color
   }
 
-  setDescription(text) {
+  setDescription(text: string) {
     this.result.embed.description = text || null
   }
 
-  setImage(uri) {
+  setImage(uri: string) {
     this.result.embed.image.uri = uri || null
   }
 
-  setThumbnail(uri) {
+  setThumbnail(uri: string) {
     this.result.embed.thumbnail.url = uri || null
   }
 
-  setTitle(text) {
+  setTitle(text: string) {
     this.result.embed.title = text || null
   }
 
-  setUrl(text, url) {
+  setUrl(text: string, url: string) {
     this.result.embed.title = text || null
     this.result.embed.url = url || null
   }
 
-  setFooter(text, image?) {
+  setFooter(text: string, image?: string) {
     this.result.embed.footer.text =
       text ||
       `${config.bot.name} ${config.bot.candidate} v.${config.bot.version} by Team. Zenithy`

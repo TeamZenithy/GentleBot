@@ -1,2 +1,3 @@
 import { owners } from '../config.json'
-export default (id) => owners.includes(id)
+import { Snowflake } from 'discord.js'
+export default (id: Snowflake) => owners.includes(id)

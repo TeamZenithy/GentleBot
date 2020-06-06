@@ -14,7 +14,7 @@ export = class Lang extends Model {
     })
   }
 
-  async run(pkg) {
+  async run(pkg: any) {
     const Embed = new SmallRichEmbed()
     if (supportLangs.includes(pkg.args[0])) {
       pkg.client.db.query(

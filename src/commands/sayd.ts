@@ -13,7 +13,7 @@ export = class Sayd extends Model {
     })
   }
 
-  async run(pkg) {
+  async run(pkg: any) {
     try {
       pkg.msg.delete().catch()
       pkg.msg.channel.send(`${pkg.msg.author.username}: ${pkg.args.join(' ')}`)

@@ -14,7 +14,7 @@ export = class Sql extends Model {
     })
   }
 
-  async run(pkg) {
+  async run(pkg: any) {
     const Embed = new SmallRichEmbed()
 
     if (this.ownerOnly && !checkOwner(pkg.msg.author.id)) {
@@ -45,7 +45,7 @@ export = class Sql extends Model {
 
     try {
       await pkg.client.db.query(args).then((output) => {
-        let result
+        let result: string
         if (minified) {
           result = JSON.stringify(output[0])
         } else {

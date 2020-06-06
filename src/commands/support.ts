@@ -13,7 +13,7 @@ export = class Support extends Model {
     })
   }
 
-  async run(pkg) {
+  async run(pkg: any) {
     const Embed = new SmallRichEmbed()
     Embed.addField(pkg.lang.get('support'), pkg.lang.get('support_desc'), true)
     pkg.msg.channel.send(Embed.get())
