@@ -4,7 +4,18 @@ export = async (client: any, msg: Message) => {
   if (msg.author.bot) return
   if (!msg.content.startsWith(client.config.bot.prefix)) return
 
-  // const raw = client.db.query(`SELECT * FROM users WHERE aid="${msg.author.id}"`).catch(console.error)
+  const checkblack = await client.db.query(
+    `SELECT black from black WHERE aid = "${msg.author.id}"`
+  )
+  if (!checkblack[0][0]) {
+    client.db.query(
+      `INSERT INTO black (aid, black) VALUES ("${msg.author.id}", false)`
+    )
+    client.db.release()
+  } else {
+    if (checkblack[0][0].black) return
+  }
+
   const userData = (
     await client.db.query(`SELECT * FROM users WHERE aid="${msg.author.id}"`)
   )[0][0]

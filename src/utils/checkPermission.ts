@@ -1,4 +1,4 @@
-import { Message, Permissions } from 'discord.js'
+import { Message, PermissionString } from 'discord.js'
 
-export default (msg: Message, type: Permissions) =>
+export default (msg: Message, type: PermissionString) =>
   msg.member.hasPermission(type)

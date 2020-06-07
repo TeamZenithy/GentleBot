@@ -64,6 +64,8 @@
   "minute": " minute",
   "second": " second",
 
+  "guild_only_cmd": "❌ This command is only available on guilds.",
+
   "github_last_commit_info": "Last Commit Info",
   "github_last_commit_info_desc": "**[``<[0]>``](<[1]>)** <[2]> - <[3]>\nby **[<[4]>](<[5]>)** on **[<[6]>](<[7]>)** Branch",
 
@@ -72,6 +74,15 @@
 
   "ban_success": "✅ Successfully Banned <[0]>.",
   "ban_fail": "❌ Failed to ban <[0]>. Review my role's permission and try again.",
+
+  "fail_permission": "❌ You don't have permission. Required Permission: **`<[0]>`**",
+  "fail_notarget": "❌ Aborted due to no target member selected.",
+
+  "blacklist_add_success": "Successfully added User **``<[0]>``**.\nReason: <[1]>",
+  "blacklist_remove_success": "Successfully remove User **``<[0]>``**.\nReason: <[1]>",
+  "blacklist_success": "Successfully added User **``<[0]>``**.\nReason: <[1]>",
+
+  "no_task":"No task provided. Please provide a task.",
 
   "cmd_invite": "📧 Invite",
   "cmd_invite_desc": "Show Bot's invite link.\nUsage:\n> ``<[0]>invite``\nSame featured command:\n> ``<[0]>초대``",
@@ -87,6 +98,14 @@
   "cmd_help_desc": "Show Bot's help message. (Like this message that you are reading!)\nUsage:\n> ``<[0]>help (command)``\nSame featured command:\n> ``<[0]>도움``, ``<[0]>도움말``, ``<[0]>manual``",
   "cmd_lang": "🌐 Language",
   "cmd_lang_desc": "Change Bot's language that react for you!\nUsage:\n> ``<[0]>lang <language code>``\nSame featured command:\n> ``<[0]>lang``, ``<[0]>language``",
+  "cmd_sayd": "🐦 Parrot message",
+  "cmd_sayd_desc": "Repeat your message!\nUsage:\n> ``<[0]>sayd <Message to send>``\nSame featured command:\n> ``<[0]>따라해``",
+
+  "cmd_kick": "🦶 Kick",
+  "cmd_kick_desc": "Kick mentioned user from server.\nUsage:\n> ``<[0]>kick <@mention>``\nSame featured command:\n> ``<[0]>킥``",
+  "cmd_ban": "🔨 Ban",
+  "cmd_ban_desc": "Ban mentioned user from server.\nUsage:\n> ``<[0]>ban <@mention>``\nSame featured command:\n> ``<[0]>밴``",
+
   "cmd_reboot": "🔄 Reboot",
   "cmd_reboot_desc": "Reboot All shards of bot.\nUsage:\n> ``<[0]>reboot``\nSame featured command:\n> ``<[0]>재시동``, ``<[0]>재시작``, ``<[0]>restart``",
   "cmd_shell": "🛠️ Shell",
@@ -97,6 +116,6 @@
   "cmd_sql_desc": "Run SQL code to remote bot server.\nUsage:\n> ``<[0]>sql <command to run>``\nSame featured command:\n> ``<[0]>db``",
   "cmd_notice": "📣 Notice",
   "cmd_notice_desc": "Send notice message to all server.\nUsage:\n> ``<[0]>notice <message>``\nSame featured command:\n> ``<[0]>공지``",
-  "cmd_sayd": "🐦 Parrot message",
-  "cmd_sayd_desc": "Repeat your message!\nUsage:\n> ``<[0]>sayd <Message to send>``\nSame featured command:\n> ``<[0]>따라해``"
+  "cmd_blacklist": "📝 Black List",
+  "cmd_blacklist_desc": "Press F to pay respect. Users on Black List are unable to use bot's command.\nUsage:\n> ``<[0]>blacklist <add | remove | list> <@mention> [Reason]``\nSame featured command:\n> ``<[0]>ignore``"
 }

@@ -9,12 +9,18 @@ export = class Invite extends Model {
       category: 'category_general',
       commandName: 'cmd_invite',
       ownerOnly: false,
-      requireVC: false
+      requireVC: false,
+      requireGuild: false
     })
   }
 
   async run(pkg: any) {
     const Embed = new SmallRichEmbed()
+    if (this.requireGuild === true && pkg.msg.guild === null) {
+      Embed.setTitle(pkg.lang.get('guild_only_cmd'))
+      Embed.setColor(16711680)
+      return pkg.msg.channel.send(Embed.get())
+    }
     Embed.addField(
       pkg.lang.get('invite'),
       pkg.lang.get('invite_desc', [

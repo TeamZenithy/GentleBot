@@ -11,14 +11,18 @@ export = class Compile extends Model {
       category: 'category_owners',
       commandName: 'cmd_compile',
       ownerOnly: true,
-      requireVC: false
+      requireVC: false,
+      requireGuild: false
     })
   }
 
   async run(pkg: any) {
     const Embed = new SmallRichEmbed()
-    Embed.init()
-
+    if (this.requireGuild === true && pkg.msg.guild === null) {
+      Embed.setTitle(pkg.lang.get('guild_only_cmd'))
+      Embed.setColor(16711680)
+      return pkg.msg.channel.send(Embed.get())
+    }
     if (this.ownerOnly && !checkOwner(pkg.msg.author.id)) {
       Embed.addField(
         pkg.lang.get('cmd_warning'),

@@ -9,12 +9,18 @@ export = class Ping extends Model {
       category: 'category_general',
       commandName: 'cmd_ping',
       ownerOnly: false,
-      requireVC: false
+      requireVC: false,
+      requireGuild: false
     })
   }
 
   async run(pkg: any) {
     const Embed = new SmallRichEmbed()
+    if (this.requireGuild === true && pkg.msg.guild === null) {
+      Embed.setTitle(pkg.lang.get('guild_only_cmd'))
+      Embed.setColor(16711680)
+      return pkg.msg.channel.send(Embed.get())
+    }
     Promise.all([pkg.client.shard.fetchClientValues('ws.ping')]).then(
       (pings) => {
         const avgPing = pings[0].reduce((prev, pings) => prev + pings, 0)

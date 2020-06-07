@@ -5,6 +5,7 @@ export default class CommandModel {
   commandName: string
   ownerOnly: boolean
   requireVC: boolean
+  requireGuild: boolean
   constructor(info) {
     if (!info) return
     this.cmds = info.cmds
@@ -13,6 +14,7 @@ export default class CommandModel {
     this.commandName = info.commandName
     this.ownerOnly = info.ownerOnly
     this.requireVC = info.requireVC
+    this.requireGuild = info.requireGuild
     console.log(`Successfully Loaded ${this.commandName}.\nCommand Structure:
 ┗─Commands: ${this.cmds}
 ┗─Description: ${this.description}
