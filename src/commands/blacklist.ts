@@ -104,7 +104,7 @@ export = class Blacklist extends Model {
        */
       if (pkg.args[0] == 'list') {
         const data = await pkg.client.db.query(
-          `SELECT id, aid, black, reason FROM black;`
+          `SELECT aid, black, reason FROM black;`
         )
         console.log(data[0])
         console.log(data[0].length)
@@ -117,7 +117,7 @@ export = class Blacklist extends Model {
         while (i < result.length) {
           if (result[i].black === 1) {
             const userInfo: User = await pkg.client.users.fetch(result[i].aid)
-            embedString += `- ${result[i].id}. ${result[i].aid}(${userInfo.username}#${userInfo.discriminator})\n`
+            embedString += `- ${result[i].aid}(${userInfo.username}#${userInfo.discriminator})\n`
           }
           i++
         }
