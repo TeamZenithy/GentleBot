@@ -115,9 +115,9 @@ export = class Blacklist extends Model {
         let i: number = 0
 
         while (i < result.length) {
-          if (result[i].black === 0) {
+          if (result[i].black === 1) {
             const userInfo: User = await pkg.client.users.fetch(result[i].aid)
-            embedString += `+ ${result[i].id}. ${result[i].aid}(${userInfo.username}#${userInfo.discriminator})\n`
+            embedString += `- ${result[i].id}. ${result[i].aid}(${userInfo.username}#${userInfo.discriminator})\n`
           }
           i++
         }
