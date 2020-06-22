@@ -12,7 +12,7 @@ export = class GitHub extends Model {
       commandName: 'cmd_github',
       ownerOnly: false,
       requireVC: false,
-      requireGuild: false
+      requireGuild: false,
     })
   }
 
@@ -36,10 +36,9 @@ export = class GitHub extends Model {
           `https://github.com/TeamZenithy/GentleBot/commit/${commitInfo.hash}`,
           `${commitInfo.subject}`,
           `${commitInfo.committer.name}`,
-          `${commitInfo.committer.name}`,
           `https://github.com/${commitInfo.committer.name}`,
           `${commitInfo.branch}`,
-          `https://github.com/TeamZenithy/GentleBot/brach/${commitInfo.branch}`
+          `https://github.com/TeamZenithy/GentleBot/brach/${commitInfo.branch}`,
         ])
       )
       pkg.msg.channel.send(Embed.get())

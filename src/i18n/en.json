@@ -67,7 +67,7 @@
   "guild_only_cmd": "❌ This command is only available on guilds.",
 
   "github_last_commit_info": "Last Commit Info",
-  "github_last_commit_info_desc": "**[``<[0]>``](<[1]>)** <[2]> - <[3]>\nby **[<[4]>](<[5]>)** on **[<[6]>](<[7]>)** Branch",
+  "github_last_commit_info_desc": "**[``<[0]>``](<[1]>)** <[2]>\nby **[<[3]>](<[4]>)** on **[<[5]>](<[6]>)** Branch",
 
   "kick_success": "✅ Successfully Kicked <[0]>.",
   "kick_fail": "❌ Failed to kick <[0]>. Review my role's permission and try again.",
@@ -82,7 +82,7 @@
   "blacklist_remove_success": "Successfully remove User **``<[0]>``**.\nReason: <[1]>",
   "blacklist_success": "Successfully added User **``<[0]>``**.\nReason: <[1]>",
 
-  "no_task":"No task provided. Please provide a task.",
+  "no_task": "No task provided. Please provide a task.",
 
   "cmd_invite": "📧 Invite",
   "cmd_invite_desc": "Show Bot's invite link.\nUsage:\n> ``<[0]>invite``\nSame featured command:\n> ``<[0]>초대``",
