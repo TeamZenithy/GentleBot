@@ -53,7 +53,7 @@ export = class Status extends Model {
         )
         Embed.addField(
           pkg.lang.get('status_bot_ram_usage'),
-          (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + 'MB',
+          (process.memoryUsage().rss / 1024 / 1024).toFixed(2) + 'MB',
           true
         )
         Embed.addField(

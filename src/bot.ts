@@ -5,14 +5,14 @@ import UlangTS = require('ulangts')
 import fs = require('fs')
 
 class GentleBot extends Client {
-  public config: any
-  public logger: any
-  public commands: any
-  public db: any
-  public i18n: any
-  public shardId: any
-  public shardCount: any
-  public fetchAllMembers: any
+  public config: object
+  public logger: object | any
+  public commands: object | any
+  public db: object
+  public i18n: object
+  public shardId: string
+  public shardCount: string
+  public fetchAllMembers: boolean
 
   constructor(_config) {
     super()

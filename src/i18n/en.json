@@ -105,6 +105,8 @@
   "cmd_kick_desc": "Kick mentioned user from server.\nUsage:\n> ``<[0]>kick <@mention>``\nSame featured command:\n> ``<[0]>킥``",
   "cmd_ban": "🔨 Ban",
   "cmd_ban_desc": "Ban mentioned user from server.\nUsage:\n> ``<[0]>ban <@mention>``\nSame featured command:\n> ``<[0]>밴``",
+  "cmd_warn": "🛠️ Warn",
+  "cmd_warn_desc": "Warn mentioned user from server.\nUsage:\n> ``<[0]>warn <@mention>``\nSame featured command:\n> ``<[0]>경고``",
 
   "cmd_reboot": "🔄 Reboot",
   "cmd_reboot_desc": "Reboot All shards of bot.\nUsage:\n> ``<[0]>reboot``\nSame featured command:\n> ``<[0]>재시동``, ``<[0]>재시작``, ``<[0]>restart``",
